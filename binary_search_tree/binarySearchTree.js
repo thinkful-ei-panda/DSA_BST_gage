@@ -27,8 +27,8 @@ class BinarySearchTree {
         this.left = new BinarySearchTree(key,value,this);
       }
       /*If the node has an existing left child
-			 * then we recusively call the 'insert' method
-			 * so the node is added futher down the tree*/
+			 * then we recursively call the 'insert' method
+			 * so the node is added further down the tree*/
       else { 
         this.insert(key,value);
       }
