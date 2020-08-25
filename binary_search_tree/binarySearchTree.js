@@ -1,5 +1,6 @@
 /* eslint-disable eqeqeq */
 class BinarySearchTree {
+
   constructor(key= null, value = null, parent = null){
     this.key = key ; 
     this.value = value;
@@ -17,7 +18,7 @@ class BinarySearchTree {
 		  and compare it to the key you want to insert
 		  If the new key is less the n the node's key
 		  then the new Node needs to live in the left-hand branch*/
-    else if(key < this,key){
+    else if(key < this.key){
       /*If the existing node does not have a left child.
 			 * mean that if the 'left' pointer is empty.
 			 * then we can just instantiate and insert the new node
@@ -30,7 +31,7 @@ class BinarySearchTree {
 			 * then we recursively call the 'insert' method
 			 * so the node is added further down the tree*/
       else { 
-        this.insert(key,value);
+        this.left.insert(key,value);
       }
     }
     /*Similarly, if the new key is greater then the node's key
@@ -44,7 +45,6 @@ class BinarySearchTree {
       }
     }
   }
-  
   find(key){
     //If the item is found at the root return the value
     if(this.key == key){
@@ -142,4 +142,4 @@ class BinarySearchTree {
   }
 
 }
-module.export = BinarySearchTree;
+module.exports = BinarySearchTree;
