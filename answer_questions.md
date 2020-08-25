@@ -37,9 +37,17 @@ function tree(t){
 }
 ```
 
+##### answer
+- **TLDR** : if i had to guess.... this is a function that adds up all the ints of the tree. or strings ... but if there is a mix it's going to get messy
+
+using __recursion__, it call that `left` , and `right`, if ether are null it returns `0`, else it return that `value` of __left__ + it's self + __right__ on so on and so forth.
 
 ### part 5: Height of a BST
 Write an algorithm to find the height of a binary search tree. What is the time complexity of your algorithm?
+
+```
+
+```
 
 ### part 6: Is it a BST?
 Write an algorithm to check whether an arbitrary binary tree is a binary search tree, assuming the tree does not contain duplicates.
