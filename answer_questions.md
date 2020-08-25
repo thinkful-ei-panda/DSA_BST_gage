@@ -46,11 +46,31 @@ using __recursion__, it call that `left` , and `right`, if ether are null it ret
 Write an algorithm to find the height of a binary search tree. What is the time complexity of your algorithm?
 
 ```
+const treeHeight = (tree) =>{  
+  if(!tree){
+    return 0;
+  }
+  else{
+    let treeRight = treeHeight(tree.right);
+    let treeLeft =  treeHeight(tree.left);
+    if(treeLeft > treeRight){
+      return treeLeft + 1;
+    }
+    else{
+      return treeRight + 1;
+    }
+  }
+};
 
 ```
+`O(n)` since it has to basicity "walk" to every node to see if those nodes have children 
 
 ### part 6: Is it a BST?
 Write an algorithm to check whether an arbitrary binary tree is a binary search tree, assuming the tree does not contain duplicates.
+
+```
+
+```
 
 ### part 7: 3rd largest node
 Write an algorithm to find the 3rd largest node in a binary search tree.
