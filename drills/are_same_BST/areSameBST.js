@@ -1,13 +1,32 @@
-const BinarySearchTree = require('../../binary_search_tree/binarySearchTree');
 const {STORE} = require('../store/store');
 
-const {log} = STORE;
-const makeTree = () =>{
-  const t = new BinarySearchTree;
-  for(let i = 0 ; i < STORE.intArray.length ; i++){
-    t.insert(STORE.intArray[i]);
+const {log, samArray1, samArray2} = STORE;
+
+/**
+ * 
+ * @param {Array} arrOne 
+ * @param {Array} arrTwo
+ * @summary when called should return a boolean based on whether the 2 arrays going in would
+ * create a similar tree to one another.
+ * 
+ */
+
+const areSameTree = (arrOne, arrTwo) => {
+  if(arrOne.length !== arrTwo){
+    return false;
   }
-  return t;
+  let right1 = [],
+    left1 = [],
+    right2 = [],
+    left2 = [],
+    i = 0; 
+    /**
+     * @todo find a way to mimic the tree 
+     * so the can be compared.
+     */
+  while( i  < arrTwo.length){
+  }
+
 };
 
-log(makeTree());
+log(areSameTree());
