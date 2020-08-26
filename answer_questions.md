@@ -88,6 +88,21 @@ const isBST = tree => {
 ### part 7: 3rd largest node
 Write an algorithm to find the 3rd largest node in a binary search tree.
 
+```
+const findThirdGreatest = (tree, store=[]) => {
+  if(!tree){
+    return;
+  }
+  store.push(tree.find(tree.key));
+
+  findThirdGreatest(tree.right, store);
+  findThirdGreatest(tree.left, store);
+
+  return store.sort((a,b) => a- b)[store.length - 3];
+}; 
+```
+
+
 ### part 8: Balanced BST
 Write an algorithm that checks if a BST is balanced (i.e., a tree where no 2 leaves differ in distance from the root by more than 1).
 
