@@ -69,7 +69,20 @@ const treeHeight = (tree) =>{
 Write an algorithm to check whether an arbitrary binary tree is a binary search tree, assuming the tree does not contain duplicates.
 
 ```
-
+const isBST = tree => {
+  if(!tree){
+    return;
+  }else{
+    isBST(tree.left);
+    isBST(tree.right);
+    if(tree.left && tree.right && (tree.left.key < tree.right.key)){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+};
 ```
 
 ### part 7: 3rd largest node
