@@ -3,6 +3,7 @@ const STORE ={
   log : console.log,
   intArray : [3,1,4,6,9,2,5,7],
   easyCharArray : ['E','A','S','Y','Q','U','E','S','T','I','O','N',],
+  blanchedArray : [10,7,3,1,5]
 };
 
 module.exports = {STORE};
