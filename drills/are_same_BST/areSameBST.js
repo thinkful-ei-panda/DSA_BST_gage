@@ -12,21 +12,39 @@ const {log, samArray1, samArray2} = STORE;
  */
 
 const areSameTree = (arrOne, arrTwo) => {
-  if(arrOne.length !== arrTwo){
+  if(arrOne.length !== arrTwo.length){
     return false;
   }
-  let right1 = [],
-    left1 = [],
-    right2 = [],
-    left2 = [],
-    i = 0; 
-    /**
-     * @todo find a way to mimic the tree 
-     * so the can be compared.
-     */
-  while( i  < arrTwo.length){
-  }
 
+  let right1 = [];
+  let left1 = [];
+  let right2 = [];
+  let left2 = [];
+  let i = 1; 
+
+  while( i  < arrOne.length){
+    if(arrOne[i] < arrOne[0]){
+      left1.unshift(arrOne[i]);
+    }
+    else {
+      right1.unshift(arrOne[i]);
+    }
+    if(arrTwo[i] < arrTwo[0]){
+      left2.unshift(arrTwo[i]);
+    }
+    else {
+      right2.unshift(arrTwo[i]);
+    }
+    i++;
+  }
+  return (
+    right2.length === left1.length 
+    && 
+    right1.length === left2.length
+    &&
+    right2.length === right1.length 
+    && 
+    left1.length === left2.length);
 };
 
-log(areSameTree());
+log(areSameTree(samArray1,samArray2)); 
